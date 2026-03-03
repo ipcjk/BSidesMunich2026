@@ -159,6 +159,7 @@
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 229, 255, 0.06);
 
+  &.platin { color: #e0e0ff; text-shadow: 0 0 20px rgba(180, 180, 255, 0.5), 0 0 40px rgba(180, 180, 255, 0.2); }
   &.gold { color: var(--neon-yellow); text-shadow: 0 0 15px rgba(255, 214, 0, 0.4); }
   &.silver { color: #b0b0b0; }
   &.bronze { color: var(--neon-orange); text-shadow: 0 0 15px rgba(255, 110, 39, 0.3); }
@@ -186,5 +187,24 @@
   &:hover {
     border-color: var(--neon-pink);
     color: var(--neon-pink);
+  }
+
+  &--platin {
+    padding: 56px 80px;
+    font-size: 1.1rem;
+    border-color: rgba(180, 180, 255, 0.25);
+
+    &:hover { border-color: #e0e0ff; color: #e0e0ff; }
+  }
+
+  &--gold {
+    padding: 44px 60px;
+
+    &:hover { border-color: var(--neon-yellow); color: var(--neon-yellow); }
+  }
+
+  &--bronze {
+    padding: 28px 32px;
+    font-size: 0.85rem;
   }
 }
