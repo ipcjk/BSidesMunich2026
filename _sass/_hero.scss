@@ -73,13 +73,17 @@
 }
 
 .hero-sun--logo {
-  width: min(86vw, 700px);
-  height: min(40vw, 340px);
+  width: min(78vw, 620px);
+  height: min(34vw, 270px);
   border-radius: 0;
-  background: url("/assets/images/bsides-munich-logo.png") center bottom / contain no-repeat;
-  opacity: 0.34;
-  filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.35))
-    drop-shadow(0 0 55px rgba(0, 229, 255, 0.2));
+  bottom: 34%;
+  background: var(--gradient-sunset);
+  -webkit-mask: url("/assets/images/bsides-munich-logo.png") center bottom / contain no-repeat;
+  mask: url("/assets/images/bsides-munich-logo.png") center bottom / contain no-repeat;
+  opacity: 0.24;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 24px rgba(255, 20, 147, 0.28))
+    drop-shadow(0 0 40px rgba(0, 229, 255, 0.16));
 
   &::before {
     content: none;
@@ -97,6 +101,14 @@
       transparent
     );
     filter: blur(18px);
+  }
+}
+
+@supports not ((-webkit-mask: url("")) or (mask: url(""))) {
+  .hero-sun--logo {
+    background: url("/assets/images/bsides-munich-logo.png") center bottom / contain no-repeat;
+    opacity: 0.18;
+    mix-blend-mode: normal;
   }
 }
 
