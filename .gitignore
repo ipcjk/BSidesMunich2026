@@ -3,3 +3,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Claude (Anthropic Claude Code)
+.claude/
+CLAUDE.md
+claude.md
